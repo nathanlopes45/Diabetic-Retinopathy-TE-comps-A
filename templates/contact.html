@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Diabetic Retinopathy</a></div>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html"> About</a></li>
+                <li><a href="flow.html"> Flow</a></li>
+                <li><a href="contact.html"> Contact Us</a></li>
+            </ul>
+            <div class="toggle_btn"> 
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html"> About</a></li>
+            <li><a href="flow.html"> Flow</a></li>
+            <li><a href="contact.html"> Contact Us</a></li>
+        </div>
+    </header>
+
+    <div class="big_card">
+        <div class="big_tools">
+          <div class="big_circle">
+            <span class="red box"></span>
+          </div>
+          <div class="big_circle">
+            <span class="yellow box"></span>
+          </div>
+          <div class="big_circle">
+            <span class="green box"></span>
+          </div>
+        </div>
+        <div class="card__content">
+            <h1 class="contact_us">Contact us</h1><br>
+            <div class="cheryl">
+                <div class="sushma_box">
+                    <span class="sushma_title">Cheryl Almeida</span>
+                    <div>
+                        <!-- <strong>JOE WATSON SBF</strong>
+                        <p>0000 000 000 0000</p>
+                        <span>VALID</span> <span>01/28</span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="nathan">
+                <div class="sushma_box">
+                    <span class="sushma_title">Nathan Lopes</span>
+                    <div>
+                        <!-- <strong>JOE WATSON SBF</strong>
+                        <p>0000 000 000 0000</p>
+                        <span>VALID</span> <span>01/28</span> -->
+                    </div>
+                </div>
+            </div><div class="mathew">
+                <div class="sushma_box">
+                    <span class="sushma_title">Mathew Lobo</span>
+                    <div>
+                        <!-- <strong>JOE WATSON SBF</strong>
+                        <p>0000 000 000 0000</p>
+                        <span>VALID</span> <span>01/28</span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="sushma">
+                <div class="sushma_box">
+                    <span class="sushma_title">Sushma Nagdeote</span>
+                    <div>
+                        <!-- <strong>JOE WATSON SBF</strong>
+                        <p>0000 000 000 0000</p>
+                        <span>VALID</span> <span>01/28</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+      </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>

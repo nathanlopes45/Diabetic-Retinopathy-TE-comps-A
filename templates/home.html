@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <title>Diabetic Retinopathy</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Diabetic Retinopathy</a></div>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="flow.html">Flow</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="toggle_btn"> 
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html"> About</a></li>
+            <li><a href="flow.html"> Flow</a></li>
+            <li><a href="contact.html"> Contact Us</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Check yours now!</h1>
+            <p>Get an overview of your condition<br/> Upload a fundus image</p>
+            <section id="file_upload">
+                <form method="POST" action="/predict" enctype="multipart/form-data">
+                    <label for="image">Upload an image:</label>
+                    <input type="file" name="imagefield" id="imagefield">
+                    <button type="submit">Submit</button>
+                </form>
+              <br><br>
+              <!--<p><img id="output" width="200" /></p> -->
+              
+            <!--<form action="/predict" method="post">
+                <button type="submit">Submit</button>
+            </form> -->
+            <h1>{{pred}}</h1>
+            </section>
+
+          </section>
+
+    
+    </main>
+
+
+    <script>
+      var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
+    <p></p>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
